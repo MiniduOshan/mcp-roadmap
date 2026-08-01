@@ -1,421 +1,53 @@
-Since you're already comfortable with Node.js, React, Docker, GitHub Actions, APIs, and backend development, the best way to learn **Model Context Protocol (MCP)** is by **building everything yourself** in GitHub rather than only reading documentation.
+# Model Context Protocol (MCP) Roadmap
 
-I would learn it in this order:
+Welcome to the **MCP Roadmap**! This repository is a comprehensive, hands-on guide to mastering the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) by building a series of increasingly complex servers. 
 
-## Phase 1 – Understand the Architecture (1 Day)
+Rather than just reading documentation, this roadmap takes a practical approach: you will learn by **building everything yourself**.
 
-Before writing code, understand what MCP actually is.
+## 🚀 The Curriculum
 
-```
-┌───────────────┐
-│   AI Client   │
-│ Claude/Cursor │
-│ ChatGPT       │
-└──────┬────────┘
-       │
-       │ JSON RPC
-       │
-┌──────▼────────┐
-│   MCP Server  │
-│ Your Project  │
-└──────┬────────┘
-       │
- ┌─────┴─────────────┐
- │  Tools            │
- │  Resources        │
- │  Prompts          │
- └───────────────────┘
-```
+This repository is split into 14 progressive stages. Each stage is a self-contained Node.js/TypeScript project designed to teach you a specific aspect of the MCP ecosystem.
 
-The MCP Server exposes three main things:
+| Stage | Topic | Description |
+|---|---|---|
+| **01** | [Basic Server](./01-Basic-Server) | Understand the architecture, JSON-RPC, and basic tool registration. |
+| **02** | [Calculator](./02-Calculator) | Implement functional math tools, input schemas, and tool execution. |
+| **03** | [Resources](./03-Resources) | Learn how to expose read-only files and data to the AI. |
+| **04** | [Prompts](./04-Prompts) | Create reusable prompt templates that the AI can trigger. |
+| **05** | [File System](./05-File-System) | Build an MCP server that interacts with the local file system (`readFile`, `writeFile`). |
+| **06** | [GitHub](./06-GitHub) | Wrap the GitHub API into MCP tools (create issues, list branches, read repos). |
+| **07** | [Weather](./07-Weather) | Consume a public REST API to provide weather forecasts to the AI. |
+| **08** | [MongoDB](./08-MongoDB) | Create an AI database assistant connected to a NoSQL database. |
+| **09** | [PostgreSQL](./09-PostgreSQL) | Create an AI SQL assistant connected to a relational database. |
+| **10** | [REST API](./10-REST-API) | Learn how to wrap a standard Express/Fastify REST API into an MCP Server. |
+| **11** | [Docker](./11-Docker) | Deploy and containerize your MCP servers using Docker. |
+| **12** | [Multi-MCP](./12-Multi-MCP) | Run multiple servers simultaneously and let the AI orchestrate them. |
+| **13** | [Agent](./13-Agent) | Build a multi-tool AI Agent MCP (Search, Summarize, Code Review). |
+| **14** | [Production MCP](./14-Production-MCP) | The capstone: Build a full production-ready enterprise MCP system. |
 
-* Tools → Functions the AI can execute
-* Resources → Files/data the AI can read
-* Prompts → Reusable prompt templates
+## 🛠️ Technologies Used
 
-Think of it like:
+As you progress through this roadmap, you will gain hands-on experience with:
 
-```
-REST API
-↓
+- **Core**: TypeScript, Node.js, `@modelcontextprotocol/sdk`
+- **APIs**: Express, Fastify, Axios
+- **Storage**: PostgreSQL, MongoDB
+- **DevOps**: Docker, GitHub Actions
+- **Auth**: OAuth, API Keys
 
-Client
-↓
+## 🎯 Getting Started
 
-Controller
-↓
+To get started, navigate to the first folder and read its `README.md`:
 
-Business Logic
+```bash
+cd 01-Basic-Server
+npm install
+npm run build
+npm start
 ```
 
-MCP is similar:
-
-```
-AI
-↓
-
-MCP Client
-
-↓
-
-MCP Server
-
-↓
-
-Your Tools
-```
+Connect your AI client (such as Claude Desktop or Cursor) to the compiled `index.js` file to start testing your tools!
 
 ---
 
-# Phase 2 – Build the Simplest MCP Server
-
-Create your first repository.
-
-```
-mcp-learning-01/
-
-README.md
-package.json
-src/
-    index.ts
-```
-
-Implement only two tools.
-
-```
-add(a,b)
-
-currentTime()
-```
-
-Connect it with Claude Desktop or Cursor.
-
-Goal:
-
-```
-User:
-What's 5 + 8?
-
-↓
-
-Claude
-
-↓
-
-MCP Server
-
-↓
-
-Tool executes
-
-↓
-
-Returns 13
-```
-
-This teaches:
-
-* JSON-RPC
-* Tool registration
-* Tool calling
-* Response format
-
----
-
-# Phase 3 – File System MCP
-
-New repository.
-
-```
-mcp-learning-02-filesystem
-```
-
-Create tools like
-
-```
-readFile()
-
-writeFile()
-
-listFiles()
-
-searchFile()
-```
-
-Now Claude can actually interact with your project.
-
----
-
-# Phase 4 – GitHub MCP
-
-This is where it gets interesting.
-
-Repository:
-
-```
-mcp-learning-03-github
-```
-
-Tools:
-
-```
-Get repository info
-
-Read README
-
-Create issue
-
-Close issue
-
-Create pull request
-
-Search repositories
-
-List branches
-
-Latest commits
-```
-
-You'll learn
-
-* GitHub API
-* Authentication
-* MCP Tool wrappers
-
----
-
-# Phase 5 – Database MCP
-
-Repository
-
-```
-mcp-learning-04-database
-```
-
-Use PostgreSQL or MongoDB.
-
-Tools
-
-```
-findUsers
-
-createUser
-
-updateUser
-
-deleteUser
-
-analytics
-```
-
-Now the AI becomes a database assistant.
-
----
-
-# Phase 6 – Weather MCP
-
-Repository
-
-```
-mcp-learning-05-weather
-```
-
-Tool
-
-```
-Current Weather
-
-Forecast
-
-Humidity
-
-Wind
-
-Sunrise
-
-Rain
-```
-
-Consumes a public weather API.
-
----
-
-# Phase 7 – AI Agent MCP
-
-Repository
-
-```
-mcp-learning-06-agent
-```
-
-Tools
-
-```
-Search Web
-
-Summarize
-
-Translate
-
-Code Review
-
-Generate README
-
-Generate Tests
-```
-
-Now multiple tools cooperate.
-
----
-
-# Phase 8 – Multi-Server MCP
-
-Run multiple servers simultaneously.
-
-```
-Claude
-
-↓
-
-Filesystem MCP
-
-↓
-
-GitHub MCP
-
-↓
-
-Weather MCP
-
-↓
-
-Database MCP
-```
-
-The AI decides which server to call.
-
----
-
-# Phase 9 – Build Your Own Production MCP
-
-Example:
-
-```
-WorkPro MCP
-
-Employee Lookup
-
-Leave Requests
-
-Attendance
-
-Payroll
-
-Projects
-
-Tasks
-
-Notifications
-```
-
-Or
-
-```
-School Agriculture MCP
-
-Weather
-
-Crop Disease
-
-Market Price
-
-Reminder
-
-Sensor Data
-```
-
----
-
-# GitHub Repository Roadmap
-
-I recommend creating a dedicated organization or folder like this:
-
-```
-mcp-roadmap/
-
-01-introduction
-02-basic-server
-03-tools
-04-resources
-05-prompts
-06-filesystem
-07-github
-08-weather
-09-database
-10-rest-api
-11-authentication
-12-multi-server
-13-production-project
-```
-
-Each repository should include:
-
-```
-README.md
-
-docs/
-
-examples/
-
-screenshots/
-
-source code
-
-step-by-step guide
-```
-
-By the end, you'll have a complete portfolio instead of a single demo.
-
----
-
-# Technologies You'll Learn
-
-| Stage      | Technology          |
-| ---------- | ------------------- |
-| Basic      | TypeScript          |
-| Core       | MCP SDK             |
-| APIs       | Express/Fastify     |
-| Auth       | OAuth, API Keys     |
-| Storage    | PostgreSQL, MongoDB |
-| HTTP       | Axios, Fetch        |
-| Testing    | Vitest              |
-| Deployment | Docker              |
-| CI/CD      | GitHub Actions      |
-
----
-
-# Final Project Structure
-
-```
-MCP-Roadmap
-│
-├── 01-Basic-Server
-├── 02-Calculator
-├── 03-Resources
-├── 04-Prompts
-├── 05-File-System
-├── 06-GitHub
-├── 07-Weather
-├── 08-MongoDB
-├── 09-PostgreSQL
-├── 10-REST-API
-├── 11-Docker
-├── 12-Multi-MCP
-├── 13-Agent
-├── 14-Production-MCP
-└── Portfolio README
-```
-
-This sequence gradually increases in complexity while producing a strong GitHub portfolio.
-
-If your goal is to **master MCP from beginner to advanced**, I can also design a **30-day hands-on curriculum** where you build one repository per day. By the end, you'll have around **20+ GitHub repositories** covering the MCP ecosystem from basic servers to production-ready AI integrations.
+*This roadmap is designed to take you from an MCP beginner to building production-ready AI integrations.*
