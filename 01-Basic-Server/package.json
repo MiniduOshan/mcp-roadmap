@@ -1,0 +1,18 @@
+{
+  "name": "01-basic-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@types/node": "^26.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
+}
