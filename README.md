@@ -49,5 +49,3 @@ npm start
 Connect your AI client (such as Claude Desktop or Cursor) to the compiled `index.js` file to start testing your tools!
 
 ---
-
-*This roadmap is designed to take you from an MCP beginner to building production-ready AI integrations.*
