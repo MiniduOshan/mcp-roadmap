@@ -1,6 +1,6 @@
 # Model Context Protocol (MCP) Roadmap
 
-Welcome to the **MCP Roadmap**! This repository is a comprehensive, hands-on guide to mastering the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) by building a series of increasingly complex servers. 
+Welcome to the **MCP Roadmap**! This repository is a comprehensive, hands-on guide to mastering the Model Context Protocol (MCP) by building a series of increasingly complex servers. 
 
 Rather than just reading documentation, this roadmap takes a practical approach: you will learn by **building everything yourself**.
 
