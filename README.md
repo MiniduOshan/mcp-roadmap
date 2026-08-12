@@ -24,10 +24,3 @@ This repository is split into 14 progressive stages. Each stage is a self-contai
 | **12** | [Multi-MCP](./12-Multi-MCP) | Run multiple servers simultaneously and let the AI orchestrate them. |
 | **13** | [Agent](./13-Agent) | Build a multi-tool AI Agent MCP (Search, Summarise, Code Review). |
 | **14** | [Production MCP](./14-Production-MCP) | The capstone: Build a full production-ready enterprise MCP system. |
-
-npm start
-```
-
-Connect your AI client (such as Claude Desktop or Cursor) to the compiled `index.js` file to start testing your tools!
-
----
