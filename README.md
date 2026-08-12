@@ -22,27 +22,9 @@ This repository is split into 14 progressive stages. Each stage is a self-contai
 | **10** | [REST API](./10-REST-API) | Learn how to wrap a standard Express/Fastify REST API into an MCP Server. |
 | **11** | [Docker](./11-Docker) | Deploy and containerize your MCP servers using Docker. |
 | **12** | [Multi-MCP](./12-Multi-MCP) | Run multiple servers simultaneously and let the AI orchestrate them. |
-| **13** | [Agent](./13-Agent) | Build a multi-tool AI Agent MCP (Search, Summarize, Code Review). |
+| **13** | [Agent](./13-Agent) | Build a multi-tool AI Agent MCP (Search, Summarise, Code Review). |
 | **14** | [Production MCP](./14-Production-MCP) | The capstone: Build a full production-ready enterprise MCP system. |
 
-## 🛠️ Technologies Used
-
-As you progress through this roadmap, you will gain hands-on experience with:
-
-- **Core**: TypeScript, Node.js, `@modelcontextprotocol/sdk`
-- **APIs**: Express, Fastify, Axios
-- **Storage**: PostgreSQL, MongoDB
-- **DevOps**: Docker, GitHub Actions
-- **Auth**: OAuth, API Keys
-
-## 🎯 Getting Started
-
-To get started, navigate to the first folder and read its `README.md`:
-
-```bash
-cd 01-Basic-Server
-npm install
-npm run build
 npm start
 ```
 
