@@ -570,8 +570,8 @@ The objective is to move from:
 
 to:
 
-> **"I can design, build, integrate, secure, containerize, and deploy MCP systems."**
-> 
+> **"I can design, build, integrate, secure, containerise, and deploy MCP systems."**
+
 ---
 
 # ⭐ Contributing
