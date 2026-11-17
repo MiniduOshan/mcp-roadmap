@@ -65,9 +65,9 @@ Each stage is a self-contained **Node.js / TypeScript** project designed to teac
 | **08** | [MongoDB](./08-MongoDB)               | Build an AI database assistant connected to a MongoDB database.                                                                                |
 | **09** | [PostgreSQL](./09-PostgreSQL)         | Build an AI SQL assistant capable of interacting with a PostgreSQL database.                                                                   |
 | **10** | [REST API](./10-REST-API)             | Learn how to integrate an existing Express/Fastify REST API with an MCP server.                                                                |
-| **11** | [Docker](./11-Docker)                 | Containerize and deploy MCP servers using Docker and Docker Compose.                                                                           |
+| **11** | [Docker](./11-Docker)                 | Containerise and deploy MCP servers using Docker and Docker Compose.                                                                           |
 | **12** | [Multi-MCP](./12-Multi-MCP)           | Run multiple MCP servers simultaneously and allow an AI application to orchestrate different capabilities.                                     |
-| **13** | [Agent](./13-Agent)                   | Build a multi-tool AI agent capable of search, summarization, code review, and tool orchestration.                                             |
+| **13** | [Agent](./13-Agent)                   | Build a multi-tool AI agent capable of search, summarisation, code review, and tool orchestration.                                             |
 | **14** | [Production MCP](./14-Production-MCP) | Build the capstone project: a production-ready enterprise MCP system with security, observability, deployment, and scalability considerations. |
 
 ---
@@ -600,13 +600,3 @@ MIT License
 ```
 
 ---
-
-## 🚀 Start Learning
-
-Begin your MCP journey here:
-
-### 👉 [01 — Basic Server](./01-Basic-Server)
-
-Build the first MCP server and understand the fundamentals before moving into tools, resources, APIs, databases, agents, and production architecture.
-
-**Build it. Break it. Understand it. Master MCP. 🚀**
